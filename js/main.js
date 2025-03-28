@@ -51,6 +51,22 @@ const getBikesObj = (array) => {
 
 }
 getBikesObj(bikeNames);
-console.log(bikesArray);
+// console.log(bikesArray);
+
+// definisco le variabili per contenere i valori di pesi delle biciclette
+let minWeight = bikesArray[0].weight;
+let lightestBike;
+
+for (i = 0; i < bikesArray.length; i++) {
+    if (minWeight > bikesArray[i].weight) {
+        lightestBike = bikesArray[i];
+        minWeight = bikesArray[i].weight;
+    }
+    // console.log(minWeight);
+}
+
+//stampo la bicicletta che pesa di meno
+console.log(lightestBike);
+
 
 
