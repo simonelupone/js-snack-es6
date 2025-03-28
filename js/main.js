@@ -5,7 +5,7 @@
 const bikesArray = [];
 
 // creo un array di nomi di biciclette
-const nomi = [
+const bikeNames = [
     "Bianchi Oltre XR4",
     "Cannondale SuperSix Evo",
     "Trek Domane SL6",
@@ -30,3 +30,27 @@ const nomi = [
 */
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 // console.log(getRandomNumber(50, 100));
+
+
+
+// funzione per generare un oggetto contenente come chiavi il nome dell'array bikesArray e il peso randomico
+
+/**
+*   function to create some objects by a given array
+*
+*   @param {array} array - array with bike values 
+*   @return {object} object build with name and weight keys
+*
+*/
+const getBikesObj = (array) => {
+
+    for (i = 0; i < array.length; i++) {
+        let randomNumber = getRandomNumber(7000, 10000);
+        bikesArray.push({ name: array[i], weight: randomNumber });
+    }
+
+}
+getBikesObj(bikeNames);
+console.log(bikesArray);
+
+
