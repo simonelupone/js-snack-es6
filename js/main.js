@@ -111,4 +111,16 @@ const getTeamsObj = (array) => {
 
 }
 getTeamsObj(teamNames);
-console.log(teamsArray);
+console.log('array generato', teamsArray);
+
+// elimino la chiave e metto gli oggetti in un nuovo array
+const editedArray = [];
+for (let i = 0; i < teamsArray.length; i++) {
+    editedArray.push({ nome: teamsArray[i].nome, falliSubiti: teamsArray[i].falliSubiti });
+}
+
+editedArray.forEach(team => {
+    delete team.punti;
+});
+
+console.log('array senza punti', editedArray);
