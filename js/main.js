@@ -31,8 +31,6 @@ const bikeNames = [
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 // console.log(getRandomNumber(50, 100));
 
-
-
 // funzione per generare un oggetto contenente come chiavi il nome dell'array bikesArray e il peso randomico
 
 /**
@@ -70,3 +68,47 @@ console.log(lightestBike);
 
 
 
+//SNACK 2
+
+// creo array di squadre di calcio con le chiavi 'nome', 'punti', 'falli subiti'.
+
+const teamNames = [
+    "Atalanta",
+    "Bologna",
+    "Cagliari",
+    "Como",
+    "Empoli",
+    "Fiorentina",
+    "Genoa",
+    "Inter",
+    "Juventus",
+    "Lazio",
+    "Lecce",
+    "Milan",
+    "Monza",
+    "Napoli",
+    "Parma",
+    "Roma",
+    "Torino",
+    "Udinese",
+    "Venezia",
+    "Verona"
+];
+
+console.log(teamNames);
+
+// creo la funzione per generare un array di oggetti con le squadre aggiungendo
+// le chiavi 'punti' e 'falli subiti'
+
+const teamsArray = [];
+const getTeamsObj = (array) => {
+
+    for (i = 0; i < array.length; i++) {
+        // non creo una variabile con il numero random perchè le squadre possono
+        // avere valori uguali
+        teamsArray.push({ nome: array[i], punti: getRandomNumber(25, 90), falliSubiti: getRandomNumber(5, 25) });
+    }
+
+}
+getTeamsObj(teamNames);
+console.log(teamsArray);
