@@ -101,6 +101,13 @@ console.log(teamNames);
 // le chiavi 'punti' e 'falli subiti'
 
 const teamsArray = [];
+/**
+*   function to create some objects by a given array
+*
+*   @param {array} array - array with bike values 
+*   @return {object}
+*
+*/
 const getTeamsObj = (array) => {
 
     for (i = 0; i < array.length; i++) {
